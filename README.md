@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# Eye Guardian
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Eye Guardian is a React countdown timer web application designed to help users follow the **20-20-20 rule** for eye protection. Every **20 minutes**, the app reminds users to look **20 feet away for 20 seconds** to reduce eye strain from prolonged screen exposure.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dark Mode Support**: Toggle between light and dark themes.
+- **Notifications**: Browser notifications with sound effects for reminders.
 
-## Expanding the ESLint configuration
+## Usage
+1. Start the timer by pressing the start button.
+2. After 20 minutes, the app reminds you to take a **20-second** break.
+3. Toggle between **light and dark mode** for better comfort.
+4. The timer restarts automatically after every break.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
+To run the app locally, follow these steps:
 
-- Configure the top-level `parserOptions` property like this:
+```sh
+git clone https://github.com/thisisrexa/eye-guardian.git
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+cd eye-guardian
+
+pnpm install
+
+pnpm dev 
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The app will be available at [http://localhost:5173](http://localhost:5173/).
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Roadmap
+- [ ] Customizable timer duration and sound effects
+- [ ] Mobile PWA Support
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Contributions
+
+Feel free to submit pull requests, create issues or spread the word.
+
+## License
+
+MIT &copy; [Rexa](https://x.com/thisisrexa)
